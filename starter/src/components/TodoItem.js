@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { toggleCompleteAsync, todoDelete } from "../redux/todoSlice";
+import { toggleCompleteAsync, todoDeleteAsync } from "../redux/todoSlice";
 const TodoItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
 
@@ -15,7 +15,7 @@ const TodoItem = ({ id, title, completed }) => {
 
   const handleDeleteClick = () => {
 	dispatch(
-		todoDelete({
+		todoDeleteAsync({
 			id:id
 		})
 	)
